@@ -1,0 +1,16 @@
+select{
+    width:80%;
+    height:30px;
+    margin-top: 20px;
+}
+
+table{
+    width:80%;
+}
+body{
+    margin-left: 18%;
+    background: rgb(191, 217, 226);
+    height: 700px;
+    width:1000px;
+}
+

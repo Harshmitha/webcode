@@ -1,0 +1,32 @@
+<html>
+<body>
+    <select>
+        <option value="mumbai" (click)="bankd()">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="bangalore">Bangalore</option>
+      </select>
+<br>
+<br>
+<input type="text" [(ngModel)]="ifsc" placeholder="Serach any fields"/><br>
+ <br>
+ 
+<table border="1" width="100%">
+  <tr>
+    <th>Sl.no</th>
+    <th>Bank Name</th>
+    <th>IFSC</th>
+    <th>Bank ID</th>
+    <th>Branch</th>
+  </tr>
+  <tr *ngFor="let customer of users | customerIFSCFilter:ifsc;let i = index">
+    <th scope="row">{{i+1}}</th>
+    <td>{{customer.bankname}}</td>
+    <td>{{customer.ifsc}}</td>
+    <td>{{customer.bankid}}</td>
+    <td>{{customer.branch}}</td>
+  </tr>
+
+</table> 
+</body>
+</html>
